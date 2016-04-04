@@ -1,0 +1,41 @@
+{
+	"options":{
+		"optimize": "uglify2",
+		"uglify2": {
+			"output": {
+				"beautify": false,
+				"source_map": null,
+				"comments": false,
+				"ascii_only": true
+			},
+			"compress": {
+				"sequences": true,
+				"drop_debugger": true,
+				"drop_console": true,
+				"global_defs": {
+					"DEBUG": false
+				}
+			},
+			"warnings": true,
+			"mangle": true
+		},
+		"preserveLicenseComments": true,
+		"removeCombined": true,
+		"dir": "web/js/",
+		"baseUrl": "source/js/",
+		"mainConfigFile": "./source/common.js",
+		"paths": {
+			"zhl": "../../common/js/zhl",
+			"almond": "../../common/lib/almond",
+			"tool": "../../common/js/tool"
+		},
+		"modules": [
+			{
+				"name": "main",
+				"include": [
+					"almond"
+				]
+			}
+		]
+	}
+}

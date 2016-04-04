@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#===============zhl==============
+#===============zhl============== 
+#ignore the npm-modules files
+/node_modules

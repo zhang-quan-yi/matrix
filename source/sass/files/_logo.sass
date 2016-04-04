@@ -1,0 +1,90 @@
+$matrix-color: rgba(35,255,35,0.5)
+$matrix-light: rgb(35,255,35)
+$matrix-size: 5rem
+#logo
+	position: absolute
+	color: $matrix-color
+	top: 30%
+	left: 0
+	right: 0
+	margin: 0 auto
+	text-align: center
+	font-size: $matrix-size
+	font-weight: bolder
+	font-family: serif
+	.container
+		position: relative
+		overflow: hidden
+		transform: scale(0.9,0.9)
+		.char
+			opacity: 0
+			padding: 5px
+			font-size: 6rem
+		p
+			display: inline-block
+			width: 100%
+			text-shadow: 1px 1px 2px black, 0 0 10px black, 0 0 20px black
+		.snippet
+			position: absolute
+			top: 0
+			left: 0
+			width: 35%
+			border-radius: 20px
+			transform: translateX(-8rem)
+			transition: transform 8s cubic-bezier(0.68, 0.02, 0.31, 0.98)
+			overflow: hidden
+		.under
+			transform: translateX(8rem)
+			transition: transform 8s cubic-bezier(0.68, 0.02, 0.31, 0.98)
+			white-space: nowrap
+			color: rgb(96,255,78)
+			text-shadow: 1px 1px 2px rgb(35,255,35), 0 0 12px rgba(35,255,25,0.8), 0 0 20px rgb(100,255,100)
+	.move
+		display: inline-block
+		transition: transform 2s linear 1s
+		transform: scale(1,1)
+		// .snippet
+			// transform: translateX(30rem)
+			// animation: breathe 1s linear infinite forward
+		// .under
+			// transform: translateX(-30rem)
+		.char
+			display: inline-block
+			color: rgb(150,255,120)
+			text-shadow: 1px 1px 2px rgb(35,255,35), 0 0 12px rgba(35,255,25,0.8), 0 0 20px rgb(100,255,100)
+			font-weight: bolder
+			opacity: 1
+			animation: wordShow 3s cubic-bezier(0, 0.56, 0.64, 0.98) 1s 1 backwards
+		.char4, .char6, .char2
+			animation-delay: 0s	
+	.stop
+		.snippet, .under
+			transtion-duration: 0
+		.snippet
+			width: 100%
+	.extendAway
+		transition: transform 3.5s ease, opacity 2s ease 0.5s
+		opacity: 0
+		transform: scale(3,3)
+@keyframes breathe
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+@keyframes wordShow
+	0%
+		opacity: 0
+		color: rgba(25,240,25,0.6)
+		text-shadow: 0 0 0 black
+		transfrom: scale(0.5,0.5)
+	10%	
+		opacity: 0
+		color: rgba(25,240,25,0.6)
+		text-shadow: 0 0 0 black
+	70%
+		opacity: 1
+		text-shadow: 1px 1px 2px rgb(35,255,35), 0 0 35px rgba(35,255,25,0.8), 0 0 60px rgb(100,255,100)
+		color: rgba(150,255,120,1)
+	100%
+		opacity: 1
+		text-shadow: 1px 1px 2px rgb(35,255,35), 0 0 12px rgba(35,255,25,0.8), 0 0 20px rgb(100,255,100)
