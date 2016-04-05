@@ -8,6 +8,7 @@ require(['zhl','rain','tool','logo'],function(){
 		//start
 		var timeId = zhl.rain.startRain();
 		setTimeout(function(){
+			showCaution();
 			zhl.logo.moveLight();
 			setTimeout(function(){
 				zhl.rain.removeCanvas(
@@ -20,5 +21,11 @@ require(['zhl','rain','tool','logo'],function(){
 				});
 			},2800);
 		},5000);
-		
+		//显示公告
+		function showCaution(){
+			var caution = document.getElementById("caution");
+			if(caution){
+				caution.style.opacity = 1;
+			}
+		}
 });

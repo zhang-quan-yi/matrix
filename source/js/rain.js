@@ -4,7 +4,7 @@ define(['tool'],function(Tools){
 		
 		const SENTENCE_WIDTH = 20;
 		const HEAD_HEIGHT = 40;
-		const FOOTER_HEIGHT = 78;
+		const FOOTER_HEIGHT = 60;
 		const FONT_COLOR = 'rgba(35,255,35,.8)';
 		const EXTEND_AWAY = 'preface-hidden';
 		var self = this;

@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
-	<title>www.domtric.com</title>
+	<title>Matrix 1.0</title>
 	<link rel="stylesheet" type="text/css" href="web/css/matrix.css" />
 </head>
 <body>
 <section id="background">
-	<p><span>维护中</span><span>...</span></p>
+	<p id="caution" class="caution">Matrix 2.0及更多功能模块 敬请期待</p>
 </div>
 </section>
 <footer>
 	<p class="my-site">www.domtric.com</p>
-	<p>664687309@qq.com</p>
+	<a href="https://github.com/zhang-quan-yi/matrix">github</a>
 </footer>
 <canvas id="preface"></canvas>
 <div id="logo">
