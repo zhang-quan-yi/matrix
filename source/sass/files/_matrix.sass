@@ -1,5 +1,5 @@
-$header-height: 4rem
-$footer-height: 6.5rem
+$header-height: 0
+$footer-height: 5rem
 body
 	width: 100%
 	height: 100%
@@ -28,6 +28,8 @@ footer
 	width: 100%
 	padding: 1rem 0
 	height: $footer-height - 2rem
+	.my-site
+		font-size: 1.4rem
 #preface
 	position: absolute
 	width: 100%
@@ -37,14 +39,14 @@ footer
 	left: 0
 	opacity: 1
 .preface-hidden
-	animation: prefaceHidden 3.5s ease 0s 1 backwards
-@keyframes prefaceHidden
+	@include animation(prefaceHidden 3.5s ease 0s 1 backwards)
+@include keyframes(prefaceHidden)
 	0%
 		opacity: 1
-		transform: scale(1,1)
+		@include transform(scale(1,1))
 	20%
 		opacity: 1
 	100%
 		opacity: 0
-		transform: scale(1.2,1.2)
+		@include transform(scale(1.2,1.2))
 		

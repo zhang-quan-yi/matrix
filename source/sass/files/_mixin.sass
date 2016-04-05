@@ -1,0 +1,68 @@
+//圆角
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+//动画
+@mixin animation($animation...)
+  -webkit-animation: $animation
+  -moz-animation: $animation
+  animation: $animation
+@mixin animation-name($name)
+  -webkit-animation-name: $name
+  -moz-animation-name: $name
+  animation-name: $name
+@mixin animation-duration($duration)
+  -webkit-animation-duration: $duration
+  -moz-animation-duration: $duration
+  animation-duration: $duration
+@mixin animation-timing-function($function)
+  -webkit-animation-function: $function
+  -moz-animation-function: $function
+  animation: $function
+@mixin animation-delay($delay)
+  -webkit-animation-delay: $delay
+  -moz-animation-delay: $delay
+  animation-delay: $delay
+@mixin animation-interation-count($count)
+  -webkit-animation-interation-count: $count
+  -moz-animation-interation-count: $count
+  animation-interation-count: $count
+//normal|reverse|alternate|alternate-reverse
+@mixin animation-direction($direction)
+  -webkit-animation-direction: $direction
+  -moz-animation-direction: $direction
+  animation-direction: $direction
+@mixin animation-fill-mode($mode)
+  -webkit-animation-fill-mode: $mode
+  -moz-animation-fill-mode: $mode
+  animation-fill-mode: $mode
+
+//transform
+@mixin transform($property)
+  -webkit-transform: $property
+  -moz-transform: $property
+  transform: $property
+
+//$content...=>variable arguments
+@mixin transition($content...)
+  -webkit-transition: $content
+  -moz-transition: $content
+  transition: $content
+@mixin transition-duration($time)
+  -webkit-transition-duration: $time
+  -moz-transition-duration: $time
+  transition-duration: $time
+
+//using #{} does mean
+// that any operations near it will be treated as plain CSS
+@mixin keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+
+  @-moz-keyframes #{$name}
+    @content
+
+  @keyframes #{$name}
+    @content

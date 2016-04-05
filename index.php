@@ -8,15 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="web/css/matrix.css" />
 </head>
 <body>
-<header>
-	<h1>WELCOME TO MATRIX</h1>
-</header>
 <section id="background">
+	<p><span>维护中</span><span>...</span></p>
 </div>
 </section>
 <footer>
-	<p>www.domtric.com</p>
-	<p>zhl && zqy</p>
+	<p class="my-site">www.domtric.com</p>
+	<p>664687309@qq.com</p>
 </footer>
 <canvas id="preface"></canvas>
 <div id="logo">
