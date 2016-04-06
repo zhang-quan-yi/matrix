@@ -6,4 +6,5 @@ zhl.js
 tool.js
 rain.js
 logo.js
+porfacePortrait.js
 main.js
