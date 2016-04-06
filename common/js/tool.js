@@ -5,9 +5,36 @@ define([],function(){
 		//使用fragment为网页添加新节点
 		appendToPage: appendToPage,
 		//判断是否是数组
-		isArray: isArray
+		isArray: isArray,
+		isNull: isNull
 	};
+//获取宽度
+//http://www.quirksmode.org/dom/w3c_cssom.html#screenview
+function getWidth(media){
+	var result;
+	switch (media){
+		case 'brower':
+		//compatible with:
+		//IE 5.5 IE 6 IE 7 IE8 IE9pr3 
+		//FF 3.0 FF 3.5	FF 3.6	FF 4b1	
+		//Saf 4.0 Win	
+		//Saf 5.0 Win	
+		//Chrome 4	Chrome 5	
+		//Opera 10.10	Opera 10.53	Opera 10.60	
+		//Konqueror 4.x
+			result = window.innerWidth;
+			break;
+		default:
 
+	}
+	return result;
+}
+function isNull(value){
+	if(value == null){
+		throw("specific can not be null");
+	}
+	return value;
+}	
 	
 function appendToPage(container,children){
 	if(!container){
