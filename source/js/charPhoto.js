@@ -5,7 +5,7 @@ define(['tool'], function(Tools) {
         const FOOTER_HEIGHT = 60;
         const CANVAS_WIDTH = window.innerWidth;
         const CANVAS_HEIGHT = window.innerHeight - FOOTER_HEIGHT;
-		const DELTA_TIME = 22;
+		const DELTA_TIME = 30;
 		const IMG_HEIGHT = 814;
 		const FONT_COLOR = 'rgba(35,255,35,0.8)';
 		const END_WORD = "============================== YOU ARE IN ==============================";
