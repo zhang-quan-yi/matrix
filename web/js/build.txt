@@ -7,4 +7,5 @@ tool.js
 rain.js
 logo.js
 porfacePortrait.js
+charPhoto.js
 main.js

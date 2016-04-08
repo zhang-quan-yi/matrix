@@ -1,9 +1,11 @@
-require(['zhl','rain','tool','logo','porfacePortrait'],function(){
+require(['zhl','rain','tool','logo','porfacePortrait','charPhoto'],function(){
 	var zhl   = require('zhl'),
 		Rain  = require('rain'),
 		Logo  = require('logo'),
 		Tools = require('tool'),
-		Portrait = require("porfacePortrait");
+		Portrait = require("porfacePortrait"),
+		CharPhoto = require('charPhoto');
+		/*
 		//初始化
 		zhl.rain = new Rain("preface");
 		zhl.logo = Logo("logo");
@@ -43,8 +45,8 @@ require(['zhl','rain','tool','logo','porfacePortrait'],function(){
 				},5000);	
 			},500);
 		}
-		
-		
+		*/
+		zhl.charPhoto = CharPhoto('preface');
 		//显示公告
 		function showCaution(){
 			var caution = document.getElementById("caution");

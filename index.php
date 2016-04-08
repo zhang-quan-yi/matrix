@@ -8,10 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="web/css/matrix.css?ver1.12" />
 </head>
 <body>
-<div id="preface-portrait">
-	<img src="web/images/preface-portrait-s.png" alt="preface-portrait" />
-	<p class="escape"><span  id="escape-btn" class="btn" onclick="">ESCAPE</span></p>
-</div>
+<!--<div id="preface-portrait">-->
+	<!--<img src="web/images/preface-portrait-s.png" alt="preface-portrait" />-->
+	<!--<p class="escape"><span  id="escape-btn" class="btn" onclick="">ESCAPE</span></p>-->
+<!--</div>-->
 <section id="background">
 	<p id="caution" class="caution">Matrix 2.0及更多功能模块 敬请期待</p>
 </div>

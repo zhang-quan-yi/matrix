@@ -6,7 +6,8 @@ define([],function(){
 		appendToPage: appendToPage,
 		//判断是否是数组
 		isArray: isArray,
-		isNull: isNull
+		isNull: isNull,
+		isEmpty: isEmpty
 	};
 //获取宽度
 //http://www.quirksmode.org/dom/w3c_cssom.html#screenview
@@ -34,8 +35,10 @@ function isNull(value){
 		throw("specific can not be null");
 	}
 	return value;
-}	
-	
+}
+function isEmpty(){
+	return (value === undefined || value === null || value === 0 || value === '');
+}
 function appendToPage(container,children){
 	if(!container){
 		throw("a container is required!");
