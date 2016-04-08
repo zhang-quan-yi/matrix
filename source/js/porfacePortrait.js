@@ -15,10 +15,12 @@ define(['tool'],function(Tools){
 				var el = document.getElementById("escape-btn");
 				el = Tools.isNull(el);
 				el.addEventListener('click',function onEscapeBtn(){
+					el.removeEventListener('click',onEscapeBtn,false);
+					el.style.display = 'none';
 					hiddenPortrait();
 					//main.js::onEscape
 					callback();
-				});
+				},false);
 			}
 			return Api;
 		}

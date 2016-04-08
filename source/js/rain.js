@@ -12,6 +12,7 @@ define(['tool'],function(Tools){
 		
 		this.startRain = startRain;
 		this.removeCanvas = removeCanvas;
+		this.extendAway = extendAway;
 		//通过id获取canvas元素
 		canvas = getCanvas(canvasId||'');
 		canvas = Tools.scaleCanvas(canvas);
@@ -125,13 +126,14 @@ define(['tool'],function(Tools){
 			start = null;	
 			canvas.style.display = 'none';
 		}
-		//remove
-		function removeCanvas(callback){
+		//消失动画
+		//this will be going on for !!3500ms 
+		function extendAway(){
 			canvas.setAttribute("class",EXTEND_AWAY);
-			setTimeout(function(){
-				end(startId);
-				callback();
-			},3500);
+		}
+		//remove
+		function removeCanvas(){
+			end(startId);
 		}
 	
 	}

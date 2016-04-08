@@ -56,15 +56,11 @@ define(['tool'],function(Tools){
 		function stop(el){
 			el.setAttribute("class",PREVIOUS_CLASS + " " + STOP_CLASS);
 		}
-		function extendAway(callback){
+		function extendAway(){
 			el.setAttribute("class",PREVIOUS_CLASS + " " + MOVE_CLASS + " " + EXTEND_AWAY);
-			remove(callback);
 		}
-		function remove(callback){
-			setTimeout(function(){
+		function remove(){
 				logo.style.display  = "none";
-				callback();
-			},3500);
 		}
 		return {
 			moveLight: function(){
@@ -73,7 +69,8 @@ define(['tool'],function(Tools){
 			stopLight: function(){
 				stop(el);
 			},
-			extendAway: extendAway
+			extendAway: extendAway,
+			remove: remove
 		};
 	}
 	return logo;

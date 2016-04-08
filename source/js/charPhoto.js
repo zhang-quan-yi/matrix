@@ -5,10 +5,11 @@ define(['tool'], function(Tools) {
         const FOOTER_HEIGHT = 60;
         const CANVAS_WIDTH = window.innerWidth;
         const CANVAS_HEIGHT = window.innerHeight - FOOTER_HEIGHT;
-		const DELTA_TIME = 30;
+		const DELTA_TIME = 22;
 		const IMG_HEIGHT = 814;
 		const FONT_COLOR = 'rgba(35,255,35,0.8)';
-		const END_WORD = "   YOU ARE IN";
+		const END_WORD = "============================== YOU ARE IN ==============================";
+		const SITE_URL = "============================== WWW.DOMTRIC.COM ==============================";
 		var	srcx,
 			startx,
 			starty = 20,
@@ -46,12 +47,11 @@ define(['tool'], function(Tools) {
 
 			//获取图片像素信息
             imgData = getPixelData(ctx,img,ratio);
-			console.log("imgData"+ imgData.data.length);
 			//将像素信息转化成字符数组
 			charArray = getCharMap(imgData.data,width, height);
 
 			imgData = null;
-
+			ctx.scale(1,1);
 			//清空画布
             ctx.fillStyle = 'black';
             ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -60,8 +60,7 @@ define(['tool'], function(Tools) {
             canvas= setCanvasVisible(true);
 
 			//设置字体、颜色
-			setFontStyle('normal 12px serif', FONT_COLOR);
-			ctx.scale(1,1);
+			setFontStyle('bold 12px serif', FONT_COLOR);
 			//开始输出到canvas
 			if(!timeId){
 				timeId = setInterval(function() {
@@ -72,6 +71,9 @@ define(['tool'], function(Tools) {
 						//结束语
 						ctx = printText(ctx, END_WORD,'center',window.innerWidth/2,srcy+12);
 						clearInterval(timeId);
+						setTimeout(function(){
+							ctx = printText(ctx,SITE_URL,'center',window.innerWidth/2,srcy+26);
+						},100);
 						timeId = null;
 					}
 				}, DELTA_TIME);
@@ -91,7 +93,7 @@ define(['tool'], function(Tools) {
 			}
 		}
 		function getImgRatio(){
-			var properHeight = (window.innerHeight - starty * 2 - 10);
+			var properHeight = (CANVAS_HEIGHT-starty * 2 - 10-14);
 			var ratio;
 			properHeight = Math.min(IMG_HEIGHT, properHeight);
 			ratio = +((properHeight/IMG_HEIGHT).toFixed(2));
@@ -104,8 +106,8 @@ define(['tool'], function(Tools) {
 		}
 		function getPixelData(ctx,img,ratio){
 			//scale img for proper size
-			ctx.scale(ratio, ratio);
-			ctx.drawImage(img, 0, 0);
+			//ctx.scale(ratio, ratio);
+			ctx.drawImage(img, 0, 0,img.width,img.height);
 			return ctx.getImageData(0, 0, img.width, img.height);
 		}
 		function getCharMap(imgDataArr,width,height){
@@ -130,6 +132,7 @@ define(['tool'], function(Tools) {
 		function initCanvas(){
 			canvas.width = CANVAS_WIDTH;
 			canvas.height = CANVAS_HEIGHT;
+			canvas.setAttribute('class','');
 			canvas.style.width = CANVAS_WIDTH + 'px';
 			canvas.style.height = CANVAS_HEIGHT + 'px';
 			return canvas;
